@@ -1,0 +1,33 @@
+Pentru rezolvarea tuturor taskurilor am folosit vectori.Pentru ultimul task un sir de caractere.
+
+task 0: 
+   Facilitatile lui printf permit afisarea adresei ip_1 in functie de cum solicita cerinta.Astfel intre cele  4 numere apare ".", iar ultimul  numar ,corspunzator mastii nu mai este afisat.
+
+task 1:
+   Forma prefixata a mastii respectiv numarul /X este impartit la 8(cati biti  alcatuiesc numarul).Catul imartirii este memorat de variabila "cat" iar restul in "rest".In vectorul masca[i] vor fi      adaugati atatia de 255 cate ne cere catul.In cazul in care restul este diferit de 0 atunci inseamna ca mai raman biti de 1 care nu mai incap intr-un octet.Astfel ei sunt shiftati la stanga pentru a forma un nou octet.Noul octet format se va afla pe urmatoarea pozitie din vectorul masca[i].Ultimul for al blocului de instructiuni al task-ului 1 este folosit pentru a mai adauga 0 in cazul in care vectorul masca[i] nu a fost parcurs pana la capat.
+
+task 2:
+    Vectorul retea va fi alcatuit in urma operatiei si(&) la nivel de biti dintre componentele vectorului ip_1 si masaca. 
+
+
+task 3:
+   In vectorul masca_c vor fi memorati bitii negati ai fiecarui element din vectorul masca.Vectorul broad va fi alcatuit in urma operatiei sau(|), la nivel de bitii dintre componentele vectorului ip_1 si  masca_c.
+    
+task 4:
+    Daca numarul adresei de ip_2,de pe aceeasi pozitie unde se afla si 255 in masca de retea, este diferit de numarul de pe aceeasi pozitie in ip_1 atunci variabila "apartine" ia valoarea 1.De asemenea daca nu se aplica acest caz atunci se trece la urmatorul,in care conditia ca ip_2 sa faca parte din aceeasi  retea este ca numerele lor sa fie egale.Daca variabila apartine are valoare 1 atunci cele 2 adrese nu fac parte din aceeasi retea.In caz contrar ele apartin de aceeasi retea.     
+
+
+
+task 5:
+    Si aici printf va afisa vectorul ip_1 in baza 16 cu ajutorul descriptorului "%02X"(se afiseaza maxim 2 caractere pentru fiecare numar) si "%0o" pentru ip_2 in baza 8.
+
+task 6:
+    Task-ul 6 reuneste acelesi instructiuni ca cele de la task-ul 4 si 1.Prima data se declara variabila "num" reprezentand numarul de adrese ip ce doresc a fi implementate.Toate aceste adrese vor fi apelate in functia task6.Pentru aflarea mastilor adreselor introduse(ip_temp) se porocedeaza ca la task-ul 1.Pentru a afla daca ip_2 face parte din aceeasi retea ca ip_temp se procedeaza ca la task 4.
+
+
+task 7:
+     In functia task 7  toate numerele din vectorul ip_1 vor fi impartite la 2  iar resturile ("bin[j]=ip[i]%2") vor fi memorate in vectorul bin[j].Vectorul bin[j]  va retine resturile impartirii,iar in vectourl bin01[j] vor fi memorate aceleasi resturi,insa pe pozitiile inversate.Pentru afisare,daca suntem la ultima iteratie nu mai apare ".",ci se pune spatiu.
+
+
+task 8:
+     Pentru afisarea lui ip_1 in baza 32 vectorul de caractere numere_b32[2] va retine toate caracterele corespunzatoare numerelor  0-31 din baza 32.Vectorul cu 2 componente b32 va retine cele 2 resturi obtinute in urma impartirii numerelor din adresa de ip_1.In cazul in care cele 2 componente sunt ambele diferite de  0 atunci ele se vor afisa cu caracterul aferent din baza 32.Daca resturile sunt 0 atunci se va afisa doar un 0.Asemanator task-ului 7,daca se ajunge la ultima iteratie atunci nu mai apare ".",ci doar spatiu.
